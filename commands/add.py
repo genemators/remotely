@@ -9,8 +9,12 @@ def cmd_add():
     def command_add(message):
         text = message.text
         new_admin = re.findall(r"/add @(.+)", text)[0]
-        config.PRE_ADMINS.append(new_admin)
-        print(config.PRE_ADMINS)
-        bot.send_message(message.from_user.id, 'Check', parse_mode='HTML')
+        if message.from_user.id in config.CREATOR:
+            config.PRE_ADMINS.append(new_admin)
+            bot.send_message(message.from_user.id, f'<b>Added</b> <a href="https://t.me/{new_admin}">{new_admin}</a> <b>to pre-admins!</b>', parse_mode='HTML')
+            pass
+        else:
+            bot.send_message(message.from_user.id, "<b>This commands requires superuser privileges!</b>", parse_mode='HTML')
+            pass
         pass
     pass
