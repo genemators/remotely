@@ -1,5 +1,7 @@
-from handler import handler
+# -*- coding: utf-8 -*-
+
 from core import launch
+from handler import handler
 
 
 def main():

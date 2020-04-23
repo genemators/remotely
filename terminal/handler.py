@@ -1,3 +1,6 @@
+# Don't forget about admin configs
+import config
+
 # Importing all terminal commands
 # Made by myself
 from terminal.cd import _cd
@@ -14,22 +17,40 @@ from terminal.shell import *
 
 
 def terminal(commands, message):
-    if "cd" in commands:
-        return _cd(commands)
-    elif "clear" in commands:
-        return _clear(commands)
-    elif "mkdir" in commands:
-        return _mkdir(commands)
-    elif "rm" in commands:
-        return _rm(commands)
-    elif "cat" in commands:
-        return _cat(commands)
-    elif "echo" in commands:
-        return _echo(commands)
-    elif "exit" in commands:
-        return _exit(commands)
-    elif "dn" in commands:
-        return _dn(commands, message)
-    else:
-        return shell(commands)
-    pass
+    if message.chat.type == "private":
+        if message.from_user.id in config.ADMINS:
+            if "cd" in commands:
+                return _cd(commands)
+            elif "clear" in commands:
+                return _clear(commands)
+            elif "mkdir" in commands:
+                return _mkdir(commands)
+            elif "rm" in commands:
+                return _rm(commands)
+            elif "cat" in commands:
+                return _cat(commands)
+            elif "echo" in commands:
+                return _echo(commands)
+            elif "exit" in commands:
+                return _exit(commands)
+            elif "dn" in commands:
+                return _dn(commands, message)
+            else:
+                return shell(commands)
+            pass
+        else:
+            reply = "Bruh, you need admin superuser privileges to access terminal commands!"
+            return reply
+        pass
+    elif message.chat.type == "group":
+        reply = "Bruh, I won't accept shell commands from groups!"
+        return reply
+        pass
+    elif message.chat.type == "supergroup":
+        reply = "Bruh, I won't accept shell commands from supergroup!"
+        return reply
+        pass
+    elif message.chat.type == "channel":
+        reply = "Bruh, I won't accept shell commands from channels!"
+        return reply
+        pass
