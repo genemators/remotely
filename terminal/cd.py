@@ -8,7 +8,7 @@ def _cd(commands):
         reply = str('Changing working directory to ' + os.getcwd())
         pass
     except FileNotFoundError:
-        reply = str('The given file not found!')
+        reply = str('The given path not found!')
         pass
     pass
 

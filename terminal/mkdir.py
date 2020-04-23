@@ -3,8 +3,10 @@ import os
 
 def _mkdir(commands):
     try:
-        os.mkdir(str(commands[1:]))
-        reply = f"The folder {commands[1:]} has been created"
+        filename = str(" ".join(commands[1:]))
+        print(filename)
+        os.mkdir(filename)
+        reply = f"The folder {filename} has been created"
         pass
     except FileExistsError:
         reply = "The folder already exists"
