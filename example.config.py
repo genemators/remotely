@@ -2,13 +2,20 @@
 # Telegram bot API token
 #
 
-TOKEN = "<enter your bot token here>"
+TOKEN = "<enter your bot api token here>"
 
 #
-# List of admins who can manage shell commands
+# Logging mode
 #
 
-ADMINS = [
-    123456789,
-    123456789,
+LOGGING = False
+
+#
+# List of admins
+#
+
+CREATOR = [
+    123456789
 ]
+
+PRE_ADMINS = []
