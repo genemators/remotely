@@ -8,7 +8,7 @@ TOKEN = "<enter your bot api token here>"
 # Logging mode
 #
 
-LOGGING = False
+LOGGING = True
 
 #
 # List of admins
