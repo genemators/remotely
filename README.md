@@ -14,11 +14,11 @@ If you want to create your own bot with my codes, just head to the [Deploy your 
 1. Download my source codes from [there](#download-sources).
 2. Unzip my master source code.
 3. CD to the root path of the project.
-4. Create your own bot in BotFather
-5. Copy bot api and bot username of your bot
-6. Rename example.config.py to config.py and edit.
-7. Enter your bot's credentials
-8. Run you bot with ```python main.py```
+4. Create your own bot in BotFather.
+5. Copy bot api and bot username of your bot.
+6. Execute setup script by typing ```./setup.sh``` on terminal.
+7. Enter your bot's credentials.
+8. Execute ```start.sh``` to start your bot's session.
 
 
 ## Download Sources
