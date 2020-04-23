@@ -4,7 +4,6 @@ import os
 def _mkdir(commands):
     try:
         filename = str(" ".join(commands[1:]))
-        print(filename)
         os.mkdir(filename)
         reply = f"The folder {filename} has been created"
         pass
