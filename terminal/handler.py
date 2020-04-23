@@ -18,7 +18,7 @@ from terminal.shell import *
 
 def terminal(commands, message):
     if message.chat.type == "private":
-        if message.from_user.id in config.ADMINS:
+        if message.from_user.id in config.CREATOR or message.from_user.username in config.PRE_ADMINS:
             if "cd" in commands:
                 return _cd(commands)
             elif "clear" in commands:

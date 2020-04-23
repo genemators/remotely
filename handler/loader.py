@@ -7,6 +7,7 @@ def handler():
     # Commands
     cmd_start()
     cmd_help()
+    cmd_add()
 
     # Terminal
     init()

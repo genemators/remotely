@@ -7,6 +7,9 @@ bot = telebot.TeleBot(config.TOKEN)
 
 
 def launch():
-    telebot.logger.setLevel(logging.DEBUG)
+    if config.LOGGING is True:
+        telebot.logger.setLevel(logging.DEBUG)
+    else:
+        pass
     bot.polling(none_stop=True)
     pass
