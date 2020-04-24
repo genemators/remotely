@@ -7,5 +7,8 @@ echo Please wait a minute
 # Renaming example configuration to configuration
 mv example.config.py config.py
 
+# Package checking stage
+pip install requirements.txt
+
 # Announcing that task is completed
 echo "Done, now insert your own credentials to conf file!"
