@@ -4,7 +4,6 @@ from core import bot
 
 
 def cmd_add():
-    # @bot.message_handler(regexp=r"/add (.+)")
     @bot.message_handler(commands=['add'])
     def command_add(message):
         text = message.text

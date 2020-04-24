@@ -8,6 +8,12 @@ def handler():
     cmd_start()
     cmd_help()
     cmd_add()
+    cmd_stats()
+    cmd_ssh()
+    cmd_ip()
+    cmd_re()
+    cmd_exit()
+    cmd_la()
 
     # Terminal
     init()
