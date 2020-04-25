@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://t.me/bsba_group">
-    <img src="assets/images/header.png" width="100%" height="150">
+    <img src="assets/header.png" width="100%" height="150">
   </a>
   <h1 align="center">Remotely</h1>
 </p>
