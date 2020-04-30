@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+certifi = "==2020.4.5.1"
+chardet = "==3.0.4"
+future = "==0.18.2"
+idna = "==2.9"
+netifaces = "==0.10.9"
+psutil = "==5.7.0"
+pyngrok = "==2.1.4"
+requests = "==2.23.0"
+six = "==1.14.0"
+urllib3 = "==1.25.9"
+pyTelegramBotAPI = "==3.6.7"
+PyYAML = "==5.3.1"
+
+[requires]
+python_version = "3.8"

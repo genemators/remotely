@@ -6,6 +6,12 @@ from config import *
 from core import bot
 
 
+# SWAP
+# swap_rm_usage = psutil.swap_memory().used >> 30
+# total_swap_rm, swrm_percent = psutil.swap_memory().total >> 30, psutil.swap_memory().percent
+# f"<b>SWAP:</b> <code>{swap_rm_usage}GB | {swrm_percent}%</code> \n" \
+# f"<b>TOTAL:</b> <code>{total_swap_rm}GB</code> \n" \
+
 def cmd_stats():
     @bot.message_handler(commands=['stats'])
     def command_stats(message):
@@ -22,9 +28,6 @@ def cmd_stats():
             # VM
             virtual_rm_usage = psutil.virtual_memory().used >> 30
             total_virtual_rm, vrm_percent = psutil.virtual_memory().total >> 30, psutil.virtual_memory().percent
-            # SWAP
-            swap_rm_usage = psutil.swap_memory().used >> 30
-            total_swap_rm, swrm_percent = psutil.swap_memory().total >> 30, psutil.swap_memory().percent
 
             # USAGE
             usage = psutil.Process(os.getpid()).memory_info()[0] >> 20
@@ -38,8 +41,6 @@ def cmd_stats():
                     "<u>RAM MANAGEMENT:</u> \n" \
                     f"<b>VM:</b> <code>{virtual_rm_usage}GB | {vrm_percent}%</code> \n" \
                     f"<b>TOTAL:</b> <code>{total_virtual_rm}GB</code> \n" \
-                    f"<b>SWAP:</b> <code>{swap_rm_usage}GB | {swrm_percent}%</code> \n" \
-                    f"<b>TOTAL:</b> <code>{total_swap_rm}GB</code> \n" \
                     "\n" \
                     "<u>MISC:</u> \n" \
                     f"<b>DATE:</b> <code>{now}</code> \n" \
